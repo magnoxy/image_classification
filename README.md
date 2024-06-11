@@ -40,4 +40,4 @@ Isso iniciará o servidor local e você poderá acessar o aplicativo em seu nave
 Contribuições são bem-vindas! Se você quiser melhorar este projeto, sinta-se à vontade para enviar pull requests ou abrir novas issues.
 
 ## O serviço esta online
-Visite o projeto na pagina https://image-classification-rosy.vercel.app/
+Visite o projeto na pagina [https://image-classification-zffy.vercel.app/](https://image-classification-zffy.vercel.app/)
