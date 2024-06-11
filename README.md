@@ -1,40 +1,36 @@
-# Classificador de Imagens
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Este é um projeto de classificação de imagens desenvolvido em React utilizando TensorFlow.js e Next.js. Ele permite que os usuários façam o upload de imagens ou cole o link da imagem para classificação, utilizando o modelo Mobilenet pré-treinado. Além disso, os resultados das classificações são traduzidos para o português.
+## Getting Started
 
-## Instalação
+First, run the development server:
 
-Para executar este projeto localmente, siga estas etapas:
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-1. Clone este repositório para o seu ambiente local:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-git clone https://github.com/magnoxy/image_classification.git
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-2. Navegue até o diretório do projeto:
+## Learn More
 
-cd image_classification
+To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-3. Instale as dependências do projeto usando npm:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-npm install
+## Deploy on Vercel
 
-## Uso
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Depois de instalar as dependências, você pode executar o projeto com os seguintes comandos:
-
-- Para compilar o projeto:
-
-npm run build
-
-
-- Para iniciar o servidor de desenvolvimento:
-
-npm run start
-
-Isso iniciará o servidor local e você poderá acessar o aplicativo em seu navegador em [http://localhost:3000](http://localhost:3000).
-
-## Contribuição
-
-Contribuições são bem-vindas! Se você quiser melhorar este projeto, sinta-se à vontade para enviar pull requests ou abrir novas issues.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
