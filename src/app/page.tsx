@@ -34,11 +34,21 @@ const LoadingModel = () => {
     }
   };
 
+  const [bypassModel, setBypassModel] = useState(false);
+
   const uploadImage = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { files } = e.target;
     if (files && files.length > 0) {
       const url = URL.createObjectURL(files[0]);
       setImageURL(url);
+
+      // Verifica se o nome do arquivo é "EDSONMAGNO.png" e aciona a flag
+      console.log(files[0])
+      if (files[0].name === "EDSONMAGNO.png") {
+        setBypassModel(true);
+      } else {
+        setBypassModel(false);
+      }
     } else {
       setImageURL(null);
     }
@@ -49,10 +59,20 @@ const LoadingModel = () => {
       textInputRef.current!.value = "";
       try {
         console.log("Classifying image...");
-        const results = await model.classify(imageRef.current);
-        console.log("Classification results:", results);
-        const translatedResults = await translateResults(results);
-        setResults(translatedResults);
+        // Verifica se a flag de bypass está ativada
+        if (bypassModel) {
+          setResults([
+            { className: "Futuro DEV Itriad", probability: 0.95 },
+            { className: "Um jovem de sucesso", probability: 1.0 },
+            { className: "Um ótimo companheiro de trabalho", probability: 1.0 },
+          ]);
+        } else {
+          // Se não for "EDSONMAGNO.png", passa pela classificação normal
+          const results = await model.classify(imageRef.current);
+          console.log("Classification results:", results);
+          const translatedResults = await translateResults(results);
+          setResults(translatedResults);
+        }
       } catch (error) {
         console.log("Error classifying image:", error);
         setResults([]);
